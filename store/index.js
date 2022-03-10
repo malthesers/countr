@@ -5,15 +5,19 @@ export const useStore = defineStore({
   state: () => {
     return {
       counter: 0,
-      method: "default",
+      method: 1,
+      secret: false,
     };
   },
   getters: {
-    doubleCounter(state) {
-      return state.counter * 2;
-    },
-    tripleCounter(state) {
-      return state.counter * 3;
+    multipliedCounter: (state) => state.counter * state.method,
+  },
+  actions: {
+    rollTheDie() {
+      const luck = Math.floor(Math.random() * 101);
+      if (luck === 100) {
+        this.secret = true;
+      }
     },
   },
 });

@@ -11,10 +11,8 @@
 import { useStore } from '~~/store';
 const store = useStore();
 
-// Log number on change
 store.$subscribe(() => {
-  const num = document.createElement("span");
-  num.textContent = store.counter;
+  const num = document.querySelector("[display] span").cloneNode(true);
   document.querySelector("footer div").prepend(num);
 }, { detached: true })
 </script>

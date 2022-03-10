@@ -8,6 +8,8 @@ import { useStore } from '~~/store';
 const store = useStore();
 
 function resetCounter () {
+  store.rollTheDie();
+
   store.$reset();
 }
 </script>

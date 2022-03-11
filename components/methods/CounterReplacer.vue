@@ -14,6 +14,8 @@ const num = ref();
 function replaceCounter (method) {
   store.rollTheDie();
 
+  console.log(num.value)
+
   if (num.value === undefined) return
   
   let newCounter;

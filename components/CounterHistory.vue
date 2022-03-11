@@ -1,5 +1,5 @@
 <template>
-  <footer class="absolute w-full bottom-0 bg-violet-900 p-4">
+  <footer class="absolute w-full bottom-0 bg-violet-900 p-4 font-mono text-yellow-100">
     <div class="text-xl flex gap-[12px] overflow-x-scroll">
       <span>0</span>
     </div>

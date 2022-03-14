@@ -9,7 +9,7 @@
       </svg>
     </div>
     <div class="place-self-center">
-      <h1>~ w o w ~</h1>
+      <h1>very cool</h1>
     </div>
     <div class="absolute w-full bottom-0 left-0">
       <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">

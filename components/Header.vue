@@ -12,3 +12,24 @@
 import { useStore } from '~~/store';
 const store = useStore();
 </script>
+
+<style scoped>
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #FEFCE8;
+  transition-duration: 300ms;
+}
+
+nav a:hover::after, nav a.router-link-exact-active::after  {
+  width: 100%;
+}
+</style>

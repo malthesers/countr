@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[60px] flex justify-between mt-4">
+  <div class="h-[68px] flex justify-between mt-4">
     <button @click="replaceCounter('-')" class="grid place-content-center border-2 border-yellow-100 rounded-l-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800"><span>−</span></button>
     <input v-model="num" class="border-y-2 border-yellow-100 bg-violet-800 w-full text-center" type="number" min="0" placeholder="0">
     <button @click="replaceCounter('+')" class="grid place-content-center border-2 border-yellow-100 rounded-r-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800"><span>+</span></button>
@@ -13,8 +13,6 @@ const num = ref();
 
 function replaceCounter (method) {
   store.rollTheDie();
-
-  console.log(num.value)
 
   if (num.value === undefined) return
   

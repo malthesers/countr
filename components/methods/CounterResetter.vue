@@ -1,5 +1,5 @@
 <template>
-  <button @click="resetCounter" class="h-[60px] w-full mt-4 text-3xl border-2 border-yellow-100 rounded-full duration-200 hover:bg-yellow-100 hover:text-violet-800">reset</button>
+  <button @click="resetCounter" class="h-[68px] w-full mt-4 text-3xl border-2 border-yellow-100 rounded-full duration-200 hover:bg-yellow-100 hover:text-violet-800">reset</button>
 </template>
 
 <script setup>

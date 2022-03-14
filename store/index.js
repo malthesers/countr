@@ -15,9 +15,7 @@ export const useStore = defineStore({
   actions: {
     rollTheDie() {
       const luck = Math.floor(Math.random() * 101);
-      if (luck === 100) {
-        this.secret = true;
-      }
+      if (luck === 100) this.secret = true;
     },
   },
 });

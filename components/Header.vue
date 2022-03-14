@@ -4,6 +4,7 @@
     <nav class="flex place-items-center gap-6 text-lg">
       <NuxtLink to="/secret" v-if="store.secret" class="animate-secret">Secret</NuxtLink>
       <NuxtLink to="/">Counter</NuxtLink>
+      <NuxtLink to="/favourites">Favourites</NuxtLink>
     </nav>
   </header>
 </template>

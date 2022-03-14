@@ -9,7 +9,6 @@ const store = useStore();
 
 function resetCounter () {
   store.rollTheDie();
-
   store.$reset();
 }
 </script>

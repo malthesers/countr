@@ -1,5 +1,5 @@
 <template>
-  <div class="absolute w-full h-full place-self-center text-center">
+  <div class="absolute w-full h-full place-self-center text-center grid">
     <div class="absolute w-full top-0 left-0">
       <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
         <path d="M 0,700 C 0,700 0,140 0,140 C 128.2666666666667,114.39999999999999 256.5333333333334,88.79999999999998 437,100 C 617.4666666666666,111.20000000000002 850.1333333333332,159.20000000000002 1026,172 C 1201.8666666666668,184.79999999999998 1320.9333333333334,162.39999999999998 1440,140 C 1440,140 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#4c1d9544" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 350)"></path>
@@ -7,6 +7,9 @@
         <path d="M 0,700 C 0,700 0,420 0,420 C 154,396.40000000000003 308,372.80000000000007 485,383 C 662,393.19999999999993 862,437.19999999999993 1025,449 C 1188,460.80000000000007 1314,440.40000000000003 1440,420 C 1440,420 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#4c1d9588" class="transition-all duration-300 ease-in-out delay-150 path-2" transform="rotate(-180 720 350)"></path>
         <path d="M 0,700 C 0,700 0,560 0,560 C 162.2666666666667,572.6666666666666 324.5333333333334,585.3333333333333 491,594 C 657.4666666666666,602.6666666666667 828.1333333333332,607.3333333333334 987,601 C 1145.8666666666668,594.6666666666666 1292.9333333333334,577.3333333333333 1440,560 C 1440,560 1440,700 1440,700 Z" stroke="none" stroke-width="0" fill="#4c1d95ff" class="transition-all duration-300 ease-in-out delay-150 path-3" transform="rotate(-180 720 350)"></path>
       </svg>
+    </div>
+    <div class="place-self-center">
+      <h1>~ w o w ~</h1>
     </div>
     <div class="absolute w-full bottom-0 left-0">
       <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 700" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">

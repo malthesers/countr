@@ -3,14 +3,13 @@
 </template>
 
 <script setup>
-import { useStore } from '~~/store';
-
-const store = useStore();
+import { useCounterStore } from "~~/store"
+const counterStore = useCounterStore()
 
 function decCounter () {
-  if (0 < store.counter) {
-    store.$patch({
-      counter: store.counter - 1,
+  if (0 < counterStore.counter) {
+    counterStore.$patch({
+      counter: counterStore.counter - 1,
     })
   }
 }

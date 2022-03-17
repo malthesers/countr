@@ -8,10 +8,10 @@
 </template>
 
 <script setup>
-import { useStore } from '~~/store';
-const store = useStore();
+import { useCounterStore } from '~~/store';
+const counterStore = useCounterStore();
 
-store.$subscribe(() => {
+counterStore.$subscribe(() => {
   const num = document.querySelector("[display] span").cloneNode(true);
   document.querySelector("footer div").prepend(num);
 }, { detached: true })

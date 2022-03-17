@@ -2,7 +2,7 @@
   <section class="w-full max-w-lg mx-auto pt-20 overflow-y-auto">
     <h1 class="text-4xl text-center">favourites</h1>
     <div class="mt-10 text-center">
-      <div v-for="number in favNums" :key="number" @click="removeFavourite($event)" class="cursor-pointer inline-block text-center px-8 py-4 mx-4 my-4 border-2 border-yellow-100 rounded-full duration-200 transform hover:bg-yellow-100 hover:text-violet-800 hover:scale-110">
+      <div v-for="number in favStore.favs" :key="number" @click="removeFavourite($event)" class="cursor-pointer inline-block text-center px-8 py-4 mx-4 my-4 border-2 border-yellow-100 rounded-full duration-200 transform hover:bg-yellow-100 hover:text-violet-800 hover:scale-110">
           {{ number }}
       </div>
     </div>
@@ -10,19 +10,15 @@
 </template>
 
 <script setup>
-const favourites = useCookie('fav');
-
-const favNums = computed(() => {
-  return favourites.value.split(',');
-})
+import { useFavStore } from "~~/store"
+const favStore = useFavStore()
 
 function removeFavourite (e) {
-  const index = Array.from(e.currentTarget.parentNode.children).indexOf(e.currentTarget);
+  const index = Array.from(e.currentTarget.parentNode.children).indexOf(e.currentTarget)
 
-  let favNums = favourites.value.split(',')
-  favNums.splice(index, 1);
-
-  favourites.value = favNums.toString();
+  favStore.$patch((state) => {
+    state.favs.splice(index, 1)
+  })
 }
 
 </script>

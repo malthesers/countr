@@ -3,13 +3,12 @@
 </template>
 
 <script setup>
-import { useStore } from '~~/store';
-
-const store = useStore();
+import { useCounterStore } from "~~/store"
+const counterStore = useCounterStore()
 
 function incCounter () {
-  store.$patch({
-    counter: store.counter + 1,
+  counterStore.$patch({
+    counter: counterStore.counter + 1,
   })
 }
 </script>

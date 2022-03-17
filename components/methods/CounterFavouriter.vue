@@ -3,13 +3,14 @@
 </template>
 
 <script setup>
-import { useStore } from '~~/store';
-
-const store = useStore();
-const favourites = useCookie('fav');
+import { useCounterStore, useFavStore } from '~~/store'
+const counterStore = useCounterStore()
+const favStore = useFavStore()
 
 function addFavourite () {
-  const num = document.querySelector("[display] span").textContent;
-  favourites.value = favourites.value + `,${num}`;
+  const num = parseInt(document.querySelector("[display] span").textContent);
+  favStore.$patch((state) => {
+    state.favs.push(num)
+  })
 }
 </script>

@@ -9,14 +9,30 @@
 </template>
 
 <script setup>
-import { useStore } from "./store";
-const store = useStore();
+import { useCounterStore, useFavStore } from "./store";
+const counterStore = useCounterStore();
+const favStore = useFavStore();
 
 const currentRoute = computed(() => {
   return useRouter().currentRoute.value.name;
 })
 
-store.$subscribe(() => {
-  store.rollTheDie();
+counterStore.$subscribe(() => {
+  counterStore.rollTheDie();
 })
+
+// Cookie handling
+
+const favCookie = useCookie('fav')
+
+onMounted(() => {
+  // Load cookie into state
+  favStore.favs = JSON.parse(JSON.stringify(favCookie.value))
+})
+
+favStore.$subscribe(() => {
+  // Update cookie 
+  favCookie.value = JSON.parse(JSON.stringify(favStore.favs))
+})
+
 </script>

@@ -7,8 +7,8 @@
 </template>
 
 <script setup>
-import { useStore } from '~~/store';
-const store = useStore();
+import { useCounterStore } from '~~/store';
+const counterStore = useCounterStore();
 const num = ref();
 
 function replaceCounter (method) {
@@ -16,14 +16,14 @@ function replaceCounter (method) {
   
   let newCounter;
   if (method === '-') {
-    newCounter = store.counter - num.value
+    newCounter = counterStore.counter - num.value
     if (newCounter < 0) newCounter = 0
   }
   if (method === '+') {
-    newCounter = store.counter + num.value
+    newCounter = counterStore.counter + num.value
     }
 
-  store.$state = {
+  counterStore.$state = {
     counter: newCounter
   };
 }

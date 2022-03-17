@@ -7,14 +7,3 @@
     <MethodsCounterFavouriter/>
   </div>
 </template>
-
-<script setup>
-import { useStore } from '~~/store';
-const store = useStore();
-
-// const favourites = useCookie('fav')
-
-// const favs = '2,14';
-
-// favourites.value = favs
-</script>

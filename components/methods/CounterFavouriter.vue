@@ -9,8 +9,6 @@ const store = useStore();
 const favourites = useCookie('fav');
 
 function addFavourite () {
-  store.rollTheDie();
-
   const num = document.querySelector("[display] span").textContent;
   favourites.value = favourites.value + `,${num}`;
 }

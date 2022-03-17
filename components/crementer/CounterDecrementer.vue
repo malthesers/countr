@@ -8,8 +8,6 @@ import { useStore } from '~~/store';
 const store = useStore();
 
 function decCounter () {
-  store.rollTheDie();
-  
   if (0 < store.counter) {
     store.$patch({
       counter: store.counter - 1,

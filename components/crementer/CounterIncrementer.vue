@@ -8,8 +8,6 @@ import { useStore } from '~~/store';
 const store = useStore();
 
 function incCounter () {
-  store.rollTheDie();
-  
   store.$patch({
     counter: store.counter + 1,
   })

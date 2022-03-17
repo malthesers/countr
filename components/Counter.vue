@@ -10,9 +10,7 @@
 import { useStore } from '~~/store';
 const store = useStore();
 
-function scrollCounter (e) {
-  store.rollTheDie();
-  
+function scrollCounter (e) {  
   if (e.deltaY < 0) {
     store.$patch({
       counter: store.counter + 1

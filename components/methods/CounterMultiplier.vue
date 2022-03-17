@@ -12,8 +12,6 @@ import { useStore } from '~~/store';
 const store = useStore();
 
 function changeMethod (newMethod) {
-  store.rollTheDie();
-  
   store.$patch({
     method: newMethod
   })

@@ -1,6 +1,6 @@
 <template>
   <Header/> 
-  <div class="w-screen min-h-screen grid bg-violet-800 text-yellow-100 text-5xl font-mono">
+  <div class="w-screen min-h-screen grid bg-violet-800 text-yellow-100 text-5xl">
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>

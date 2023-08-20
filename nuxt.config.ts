@@ -19,5 +19,9 @@ export default {
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", ["@nuxtjs/google-fonts", {
+    families: {
+      Inter: [500, 600, 700]
+    },
+  }]],
 };

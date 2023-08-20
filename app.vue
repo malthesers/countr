@@ -27,7 +27,7 @@ const favCookie = useCookie('fav')
 
 onMounted(() => {
   // Load cookie into state
-  favStore.favs = JSON.parse(JSON.stringify(favCookie.value))
+  if (favCookie.value) favStore.favs = JSON.parse(JSON.stringify(favCookie.value))
 })
 
 favStore.$subscribe(() => {

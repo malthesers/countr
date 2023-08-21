@@ -15,9 +15,11 @@ export default {
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", ["@nuxtjs/google-fonts", {
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", ["@nuxtjs/google-fonts"]],
+  googleFonts: {
     families: {
-      'Montserrat Alternates': [500, 600, 700]
+      'Montserrat Alternates': [500, 600, 700],
     },
-  }]],
+    download: true,
+  }                                                                            
 };

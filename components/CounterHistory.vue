@@ -7,11 +7,16 @@
 
 <script setup>
 import { useCounterStore } from '~~/store';
+import { useHistoryStore } from '~~/store';
 const counterStore = useCounterStore();
+const historyStore = useHistoryStore();
 
-counterStore.$subscribe(() => {
-  const num = document.querySelector("[display] span").cloneNode(true);
-  document.querySelector("footer div").prepend(num);
+counterStore.$subscribe((mutation, state) => {
+  if (mutation.events[0].oldValue !== state.counter) {
+    historyStore.$patch((state) => {
+      state.history.unshift(mutation.events[0].oldValue)
+    })
+  }
 }, { detached: true })
 </script>
 

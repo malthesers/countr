@@ -22,16 +22,20 @@ counterStore.$subscribe(() => {
 })
 
 // Cookie handling
-
+const counterCookie = useCookie('counter')
 const favCookie = useCookie('fav')
 
+counterStore.$subscribe(() => {
+  counterCookie.value = JSON.parse(JSON.stringify(counterStore.$state))
+})
+
 favStore.$subscribe(() => {
-  // Update cookie 
   favCookie.value = JSON.parse(JSON.stringify(favStore.favs))
 })
 
 onMounted(() => {
   // Load cookie into state
   if (favCookie.value) favStore.favs = JSON.parse(JSON.stringify(favCookie.value))
+  if (counterCookie.value) counterStore.$state = JSON.parse(JSON.stringify(counterCookie.value))
 })
 </script>

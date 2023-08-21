@@ -1,5 +1,5 @@
 <template>
-  <div @wheel="scrollCounter" class="flex justify-between">
+  <div @wheel.passive="scrollCounter" class="flex justify-between">
     <CrementerCounterDecrementer/>
     <CrementerCounterDisplay/>
     <CrementerCounterIncrementer/>

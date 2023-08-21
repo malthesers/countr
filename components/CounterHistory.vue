@@ -1,8 +1,6 @@
 <template>
   <footer class="absolute w-full bottom-0 bg-violet-900 p-4 font-mono text-yellow-100">
-    <div class="text-xl flex gap-[12px] overflow-x-scroll">
-      <span>0</span>
-    </div>
+    <div class="text-xl flex gap-[12px] overflow-x-scroll"></div>
     <div class="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-r from-transparent to-violet-900 pointer-events-none"/>
   </footer>
 </template>

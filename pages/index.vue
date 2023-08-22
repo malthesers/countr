@@ -1,5 +1,5 @@
 <template>
-  <div class="w-80 place-self-center text-center">
+  <div class="max-w-xs place-self-center text-center px-4">
     <Counter/>
     <MethodsCounterReplacer/>
     <MethodsCounterMultiplier/>

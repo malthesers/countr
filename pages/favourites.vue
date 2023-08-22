@@ -1,10 +1,12 @@
 <template>
-  <section class="w-full max-w-lg mx-auto pt-20 overflow-y-auto">
+  <section class="w-full max-w-3xl mx-auto pt-20">
     <h1 class="text-4xl text-center">favourites</h1>
-    <div class="mt-10 text-center">
-      <div v-for="number in favStore.favs" :key="number" @click="removeFavourite($event)" class="cursor-pointer inline-block text-center px-8 py-4 mx-4 my-4 border-2 border-yellow-100 rounded-full duration-200 transform hover:bg-yellow-100 hover:text-violet-800 hover:scale-110">
-          {{ number }}
-      </div>
+    <div class="flex flex-wrap justify-center gap-8 mt-10 px-2 text-center">
+      <TransitionGroup name="fade">
+        <div v-for="number in favStore.favs" :key="number" @click="removeFavourite($event)" class="relative text-center cursor-pointer">
+            <div class="px-8 py-4 border-2 border-yellow-100 rounded-full duration-200 hover:bg-yellow-100 hover:text-violet-800 hover:scale-110">{{ number }}</div>
+        </div>
+      </TransitionGroup>
     </div>
   </section>
 </template>
@@ -20,7 +22,6 @@ function removeFavourite (e) {
     state.favs.splice(index, 1)
   })
 }
-
 </script>
 
 <style scoped>
@@ -34,5 +35,18 @@ function removeFavourite (e) {
 
 ::-webkit-scrollbar-thumb {
   background: #4c1d95;
+}
+
+.fade-move,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 200ms ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-leave-active div {
+  position: absolute;
 }
 </style>

@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script setup lang="js">
+<script setup>
 useHead({
   title: 'countr'
 })

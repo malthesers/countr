@@ -22,6 +22,10 @@ function removeFavourite (e) {
     state.favs.splice(index, 1)
   })
 }
+
+useHead({
+  title: 'countr | favourites'
+})
 </script>
 
 <style scoped>

@@ -21,6 +21,13 @@
     </div>
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: 'countr | secret'
+})
+</script>
+
 <style scoped>
 .path-0{
   animation:pathAnim-0 4s;

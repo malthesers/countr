@@ -1,6 +1,8 @@
 <template>
   <div display class="inline-grid w-full border-y-2 border-yellow-100">
-    <span  class="self-center">{{ counterStore.multipliedCounter }}</span>
+    <Transition name="fade" mode="out-in">
+      <span :key="counterStore.multipliedCounter" class="self-center">{{ counterStore.multipliedCounter }}</span>
+    </Transition>
   </div>
 </template>
 
@@ -8,3 +10,15 @@
 import { useCounterStore } from "~~/store"
 const counterStore = useCounterStore()
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 250ms ease-in;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

@@ -2,7 +2,9 @@
   <header class="absolute z-10 w-full bg-violet-900 text-yellow-100 lowercase flex justify-between px-6 py-3">
     <NuxtLink to="/" class="text-2xl">Countr</NuxtLink>
     <nav class="hidden sm:flex place-items-center gap-6 text-lg">
-      <NuxtLink to="/secret" v-if="counterStore.secret" class="animate-secret">Secret</NuxtLink>
+      <Transition name="fade">
+        <NuxtLink to="/secret" v-if="counterStore.secret">Secret</NuxtLink>
+      </Transition>
       <NuxtLink to="/">Counter</NuxtLink>
       <NuxtLink to="/favourites">Favourites</NuxtLink>
     </nav>
@@ -13,7 +15,9 @@
       <Transition name="appear">
         <div v-if="showMobileMenu" class="fixed top-0 z-10 w-full h-screen bg-violet-900 text-yellow-100 grid lowercase">
           <nav @click="showMobileMenu = false" class="flex flex-col my-auto gap-6 text-4xl">
-            <NuxtLink to="/secret" v-if="counterStore.secret" class="mx-auto">Secret</NuxtLink>
+            <Transition name="fade">
+              <NuxtLink to="/secret" v-if="counterStore.secret" class="mx-auto">Secret</NuxtLink>
+            </Transition>
             <NuxtLink to="/" class="mx-auto">Counter</NuxtLink>
             <NuxtLink to="/favourites" class="mx-auto">Favourites</NuxtLink>
           </nav>
@@ -57,6 +61,16 @@ nav a:hover::after, nav a.router-link-exact-active::after  {
 
 .appear-enter-from,
 .appear-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 400ms linear;
+}
+
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

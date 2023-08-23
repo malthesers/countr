@@ -19,7 +19,7 @@ counterStore.$subscribe(() => {
   historyStore.$patch((state) => {
     state.history.unshift(counterStore.multipliedCounter)
   })
-}, { detached: true })
+})
 </script>
 
 <style scoped>

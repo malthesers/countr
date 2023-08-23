@@ -34,8 +34,19 @@ favStore.$subscribe(() => {
 })
 
 onMounted(() => {
-  // Load cookie into state
+  // Load cookies
   if (favCookie.value) favStore.favs = JSON.parse(JSON.stringify(favCookie.value))
   if (counterCookie.value) counterStore.$state = JSON.parse(JSON.stringify(counterCookie.value))
 })
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 250ms;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+</style>

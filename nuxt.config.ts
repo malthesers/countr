@@ -4,6 +4,10 @@ export default {
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
     ],
   },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
+  },
   css: ["@/assets/css/main.css"],
   build: {
     postcss: {

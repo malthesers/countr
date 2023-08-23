@@ -1,8 +1,8 @@
 <template>
   <div class="h-[68px] flex justify-between mt-4">
-    <button @click="replaceCounter('-')" class="grid place-content-center border-2 border-yellow-100 rounded-l-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800"><span>−</span></button>
+    <button @click="subtractCounter" class="grid place-content-center border-2 border-yellow-100 rounded-l-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800"><span>−</span></button>
     <input v-model="num" class="border-y-2 border-yellow-100 bg-violet-800 w-full text-center" type="number" min="0" placeholder="0">
-    <button @click="replaceCounter('+')" class="grid place-content-center border-2 border-yellow-100 rounded-r-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800"><span>+</span></button>
+    <button @click="addCounter" class="grid place-content-center border-2 border-yellow-100 rounded-r-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800"><span>+</span></button>
   </div>
 </template>
 
@@ -11,21 +11,16 @@ import { useCounterStore } from '~~/store';
 const counterStore = useCounterStore();
 const num = ref();
 
-function replaceCounter (method) {
-  if (num.value === undefined) return
-  
-  let newCounter;
-  if (method === '-') {
-    newCounter = counterStore.counter - num.value
-    if (newCounter < 0) newCounter = 0
-  }
-  if (method === '+') {
-    newCounter = counterStore.counter + num.value
-    }
+function subtractCounter () {
+  counterStore.$patch((state) => {
+    state.counter = state.counter - (num.value || 0)
+  })
+}
 
-  counterStore.$state = {
-    counter: newCounter
-  };
+function addCounter () {
+  counterStore.$patch((state) => {
+    state.counter = state.counter + (num.value || 0)
+  })
 }
 </script>
 

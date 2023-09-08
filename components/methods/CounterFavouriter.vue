@@ -3,8 +3,7 @@
 </template>
 
 <script setup>
-import { useCounterStore, useFavStore } from '~~/store'
-const counterStore = useCounterStore()
+import { useFavStore } from '~~/store'
 const favStore = useFavStore()
 
 function addFavourite () {

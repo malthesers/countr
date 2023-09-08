@@ -2,7 +2,7 @@
   <Header/> 
   <div class="w-screen min-h-screen grid bg-violet-800 text-yellow-100 text-5xl">
     <NuxtLayout>
-      <NuxtPage/>
+      <NuxtPage :key="$route.fullPath"/>
     </NuxtLayout>
   </div>
   <CounterHistory v-if="currentRoute === 'index'"/>

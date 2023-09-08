@@ -1,5 +1,7 @@
 <template>
-  <button @click="decCounter" class="border-2 border-yellow-100 rounded-l-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800">❮</button>
+  <button @click="decCounter" class="grid place-content-center border-2 border-yellow-100 rounded-l-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800 group">
+    <span class="duration-200 group-active:scale-75">❮</span>
+  </button>
 </template>
 
 <script setup>

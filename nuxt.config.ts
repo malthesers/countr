@@ -10,6 +10,9 @@ export default {
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },
   css: ["@/assets/css/main.css"],
+  nitro: {
+    preset: 'github_pages'
+  },
   build: {
     postcss: {
       postcssOptions: {

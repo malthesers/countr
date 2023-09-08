@@ -1,4 +1,5 @@
 export default {
+  baseURL: '/countr/',
   meta: {
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },

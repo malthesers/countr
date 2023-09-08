@@ -1,11 +1,11 @@
 <template>
-  <div class="h-[68px] flex justify-between mt-4 group">
+  <div class="h-[68px] flex justify-between mt-4">
     <button @click="subtractCounter" class="grid place-content-center border-2 border-yellow-100 rounded-l-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800 group/sub">
-      <span class="duration-200 group-active/sub:scale-50">−</span>
+      <span class="duration-200 group-active/sub:scale-75">−</span>
     </button>
     <input v-model="num" class="border-y-2 border-yellow-100 bg-violet-800 w-full text-center" type="number" min="0" placeholder="0">
     <button @click="addCounter" class="grid place-content-center border-2 border-yellow-100 rounded-r-full py-2 px-4 duration-200 hover:bg-yellow-100 hover:text-violet-800 group/add">
-      <span class="duration-200 group-active/add:scale-50">+</span>
+      <span class="duration-200 group-active/add:scale-75">+</span>
     </button>
   </div>
 </template>

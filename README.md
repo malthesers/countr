@@ -4,13 +4,13 @@ Increment, decrement, multiply and alter the counter however you like!
 
 ## 📋 Instructions
 
-### Methods
+### 🛠️ Methods
 
 #### Reset
 
 #### Favourite
 
-### Mathods
+### 🧮 Mathods
 
 #### Incrementing and Decrementing
 

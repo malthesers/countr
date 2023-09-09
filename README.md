@@ -8,16 +8,16 @@ Increment, decrement, multiply and alter the counter however you like!
 
 ### Components
 
-#### History
+#### 📜 History
 
 At the bottom of the counter page, you'll find any and all past numbers, appearing as the current counter changes.
 
-#### Favourites
+#### ⭐ Favourites
 
 On the favourites page, you'll see all the previous numbers you have added with the favourite button.
 
 Click any number to remove it from favourites.
 
-#### Secret
+#### 👀 Secret
 
 Whenever the counter changes, it may be unlocked.

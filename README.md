@@ -6,6 +6,18 @@ Increment, decrement, multiply and alter the counter however you like!
 
 ### Methods
 
+#### Reset
+
+#### Favourite
+
+### Mathods
+
+#### Incrementing and Decrementing
+
+#### Addition and Subtraction
+
+#### Multiplier
+
 ### Components
 
 #### 📜 History

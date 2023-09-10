@@ -4,7 +4,7 @@
     "dev": "nuxi dev",
     "build": "nuxi build",
     "preview": "npx serve .output/public",
-    "deploy": "npx gh-pages -d .output/public"
+    "deploy": "npx gh-pages -d .output/public -t true"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3.0.2",

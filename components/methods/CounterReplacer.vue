@@ -31,6 +31,8 @@ function addCounter () {
 <style scoped>
 input, input:hover, input:focus, input:focus-visible {
   outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 input::-webkit-inner-spin-button {

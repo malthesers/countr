@@ -1,11 +1,13 @@
 <template>
-  <Header/> 
-  <div class="w-screen min-h-screen grid bg-violet-800 text-yellow-100 text-5xl">
-    <NuxtLayout>
-      <NuxtPage :key="$route.fullPath"/>
-    </NuxtLayout>
+  <div class="w-screen min-h-screen flex flex-col justify-between bg-violet-800 text-yellow-100">
+    <Header/> 
+    <div class="grid text-5xl">
+      <NuxtLayout>
+        <NuxtPage :key="$route.fullPath"/>
+      </NuxtLayout>
+    </div>
+    <CounterHistory />
   </div>
-  <CounterHistory v-if="currentRoute === 'index'"/>
 </template>
 
 <script setup>

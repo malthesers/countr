@@ -1,5 +1,5 @@
 <template>
-  <header class="absolute z-10 w-full bg-violet-900 text-yellow-100 lowercase flex justify-between px-6 py-3">
+  <header class="w-full bg-violet-900 lowercase flex justify-between px-6 py-3 z-10">
     <NuxtLink to="/" class="text-2xl">Countr</NuxtLink>
     <nav class="hidden sm:flex place-items-center gap-6 text-lg">
       <Transition name="fade">
@@ -13,7 +13,7 @@
     </p>
     <Teleport to="body">
       <Transition name="appear">
-        <div v-if="showMobileMenu" class="fixed top-0 z-10 w-full h-screen bg-violet-900 text-yellow-100 grid lowercase">
+        <div v-if="showMobileMenu" class="fixed top-0 z-10 w-full h-screen bg-violet-900 grid lowercase">
           <nav @click="showMobileMenu = false" class="flex flex-col my-auto gap-6 text-4xl">
             <Transition name="fade">
               <NuxtLink to="/secret" v-if="counterStore.secret" class="mx-auto">Secret</NuxtLink>

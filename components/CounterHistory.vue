@@ -1,5 +1,5 @@
 <template>
-  <footer class="absolute w-full bottom-0 bg-violet-900 p-4 font-mono text-yellow-100">
+  <footer class="relative bottom-0 bg-violet-900 p-4 font-mono text-yellow-100">
     <div class="h-10 text-xl flex gap-[12px] overflow-x-scroll">
       <TransitionGroup name="slide">
         <span v-for="number in historyStore.history" :key="number">{{ number }}</span>

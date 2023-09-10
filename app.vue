@@ -1,12 +1,12 @@
 <template>
   <div class="w-screen min-h-screen flex flex-col justify-between bg-violet-800 text-yellow-100">
-    <Header/> 
+    <CounterHeader/> 
     <div class="grid text-5xl">
       <NuxtLayout>
         <NuxtPage :key="$route.fullPath"/>
       </NuxtLayout>
     </div>
-    <CounterHistory/>
+    <CounterFooter/>
   </div>
 </template>
 

@@ -5,6 +5,7 @@ export default {
     ],
   },
   app: {
+    baseURL: '/countr/',
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' }
   },

@@ -10,6 +10,11 @@
 
 <script setup>
 import { useCounterStore, useFavStore } from "./store";
+
+useHead({
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+})
+
 const counterStore = useCounterStore();
 const favStore = useFavStore();
 

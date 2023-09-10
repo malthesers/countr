@@ -1,9 +1,4 @@
 export default {
-  meta: {
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-    ],
-  },
   app: {
     baseURL: '/countr/',
     pageTransition: { name: 'page', mode: 'out-in' },

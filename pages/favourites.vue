@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h1 v-if="favStore.favs.length === 0" class="text-4xl text-center">no favourites yet</h1>
+    <Transition name="appear">
+      <h1 v-if="favStore.favs.length === 0" class="text-4xl text-center">no favourites yet</h1>
+    </Transition>
     <div v-if="favStore.favs.length !== 0" class="flex flex-wrap justify-center gap-8 mt-10 p-2 text-center">
       <TransitionGroup name="fade">
         <span v-for="number in favStore.favs" :key="number" @click="removeFavourite($event)" class="relative cursor-pointer overflow-hidden">
@@ -39,6 +41,16 @@ useHead({
 
 ::-webkit-scrollbar-thumb {
   background: #4c1d95;
+}
+
+.appear-enter-active,
+.appear-leave-active {
+  transition: opacity 250ms ease;
+}
+
+.appear-enter-from,
+.appear-leave-to {
+  opacity: 0
 }
 
 .fade-move,

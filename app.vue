@@ -6,7 +6,7 @@
         <NuxtPage :key="$route.fullPath"/>
       </NuxtLayout>
     </div>
-    <CounterHistory />
+    <CounterHistory/>
   </div>
 </template>
 

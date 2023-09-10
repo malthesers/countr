@@ -13,7 +13,7 @@
     </p>
     <Teleport to="body">
       <Transition name="appear">
-        <div v-if="showMobileMenu" class="fixed top-0 z-10 w-full h-screen bg-violet-900 text-yellow-100 grid lowercase">
+        <div v-if="showMobileMenu" class="fixed top-0 z-10 w-full h-[100dvh] bg-violet-900 text-yellow-100 grid lowercase">
           <nav @click="showMobileMenu = false" class="flex flex-col my-auto gap-6 text-4xl">
             <Transition name="fade">
               <NuxtLink to="/secret" v-if="counterStore.secret" class="mx-auto">Secret</NuxtLink>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen min-h-screen flex flex-col justify-between bg-violet-800 text-yellow-100">
+  <div class="w-[100dvw] min-h-[100dvh] flex flex-col justify-between bg-violet-800 text-yellow-100">
     <CounterHeader/> 
     <div class="grid text-5xl">
       <NuxtLayout>

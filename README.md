@@ -6,19 +6,31 @@ Increment, decrement, multiply and alter the counter however you like!
 
 ### 🛠️ Methods
 
-#### Reset
+#### 🔄 Reset
 
-#### Favourite
+The _reset_ buttons will reset the current display, multiplier, and if unlocked, the secret as well.
+
+#### ✨ Favourite
+
+Add a the currently displayed number to the list of favourites.
 
 ### 🧮 Mathods
 
-#### Incrementing and Decrementing
+#### 🔼 Incrementing & 🔽 Decrementing
 
-#### Addition and Subtraction
+You can increment and decrement the number using the two arrows next to the display, left decrementing and right incrementing.
 
-#### Multiplier
+Additionally, scrolling while hovering over the display, will increment when scrolling up and decrement when scrolling down.
 
-### Components
+#### ➕ Addition & ➖ Subtraction
+
+You can enter any number in the input field and add it to the current number by hitting the _+_ or subtract it by hitting the _-_.
+
+#### ✖️ Multiplier
+
+You can choose a multiplier to apply to the number including the default _1x_ as well as _2x_ and _3x_.
+
+### 🧩 Components
 
 #### 📜 History
 

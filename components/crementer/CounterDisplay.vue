@@ -1,7 +1,7 @@
 <template>
-  <div display class="inline-grid w-full border-y-2 border-yellow-100">
+  <div display class="inline-grid w-full px-2 border-y-2 border-yellow-100">
     <Transition name="fade" mode="out-in">
-      <span :key="counterStore.multipliedCounter" class="self-center">{{ counterStore.multipliedCounter }}</span>
+      <span :key="counterStore.multipliedCounter" class="self-center leading-normal overflow-x-scroll">{{ counterStore.multipliedCounter }}</span>
     </Transition>
   </div>
 </template>
@@ -12,6 +12,10 @@ const counterStore = useCounterStore()
 </script>
 
 <style scoped>
+::-webkit-scrollbar {
+  display: none;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 250ms ease-in;

@@ -1,11 +1,11 @@
 <template>
-  <section class="max-w-2xl mx-auto overflow-auto">
+  <section class="max-w-2xl mx-auto">
     <Transition name="appear">
-      <h1 v-if="favStore.favs.length === 0" class="text-2xl sm:text-4xl text-center">no favourites yet</h1>
+      <h1 v-if="favourites === 0" class="text-2xl sm:text-4xl text-center">no favourites yet</h1>
     </Transition>
-    <div v-if="favStore.favs.length !== 0" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 p-4 text-center">
+    <div v-if="favourites !== 0" class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 p-4 text-center">
       <TransitionGroup name="fade">
-        <span v-for="number in favStore.favs" :key="number" @click="removeFavourite($event)" class="relative cursor-pointer overflow-hidden">
+        <span v-for="number in favourites" :key="number" @click="removeFavourite($event)" class="relative cursor-pointer overflow-hidden">
           <div class="top-0 left-0 text-2xl px-4 py-2 sm:text-3xl sm:px-6 sm:py-3 md:text-5xl md:px-8 md:py-4 border-2 border-yellow-100 rounded-full duration-200 hover:bg-yellow-100 hover:text-violet-800">{{ number }}</div>
         </span>
       </TransitionGroup>
@@ -16,6 +16,10 @@
 <script setup>
 import { useFavStore } from "~~/store"
 const favStore = useFavStore()
+
+const favourites = computed(() => {
+  return favStore.favs.slice(0, 20)
+})
 
 function removeFavourite (e) {
   const index = Array.from(e.currentTarget.parentNode.children).indexOf(e.currentTarget)

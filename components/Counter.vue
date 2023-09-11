@@ -17,7 +17,7 @@ function scrollCounter (e) {
     })
   }
 
-  if (e.deltaY > 0 && counterStore.counter > 0) {
+  if (e.deltaY > 0) {
     counterStore.$patch({
       counter: counterStore.counter - 1
     })

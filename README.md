@@ -30,10 +30,10 @@ Scroll horizontally through the history of numbers.
 
 On the favourites page, you'll see all the previous numbers you have added with the favourite button.
 
-Click any number to remove it from favourites.
+Click a number to remove it from favourites.
 
 #### 👀 Secret
 
 Whenever the counter changes, it may be unlocked and appear in the header.
 
-Resetting seals the secret yet again.
+The secret is re-sealed when clicking _reset_.

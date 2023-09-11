@@ -22,6 +22,8 @@ You can increment and decrement the number using the two arrows next to the disp
 
 Additionally, scrolling while hovering over the display, will increment when scrolling up and decrement when scrolling down.
 
+Scrolling while holding the _shift_ key will not change the number but instead scroll horizontally when the number is too big.
+
 #### ➕ Addition & ➖ Subtraction
 
 You can enter any number in the input field and add it to the current number by hitting the _+_ or subtract it by hitting the _-_.

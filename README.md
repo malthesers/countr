@@ -2,6 +2,8 @@
 
 Increment, decrement, multiply and alter the counter however you like!
 
+Start [counting!](https://malthesers.github.io/countr/)
+
 ## 📋 Instructions
 
 ### 🛠️ Methods

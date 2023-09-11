@@ -6,9 +6,13 @@ Increment, decrement, multiply and alter the counter however you like!
 
 ### 🛠️ Methods
 
-#### Reset
+#### 🔄 Reset
 
-#### Favourite
+The _reset_ buttons will reset the current display, multiplier, and if unlocked, the secret as well.
+
+#### ✨ Favourite
+
+Add a the currently displayed number to the list of favourites.
 
 ### 🧮 Mathods
 

@@ -11,16 +11,19 @@ import { useCounterStore } from '~~/store';
 const counterStore = useCounterStore();
 
 function scrollCounter (e) {
-  if (e.deltaY < 0) {
-    counterStore.$patch({
-      counter: counterStore.counter + 1
-    })
-  }
+  // Only if shift was not held to allow scrolling through higher numbers
+  if (!e.shiftKey) {
+    if (e.deltaY < 0) {
+      counterStore.$patch({
+        counter: counterStore.counter + 1
+      })
+    }
 
-  if (e.deltaY > 0) {
-    counterStore.$patch({
-      counter: counterStore.counter - 1
-    })
+    if (e.deltaY > 0) {
+      counterStore.$patch({
+        counter: counterStore.counter - 1
+      })
+    }
   }
 }
 </script>

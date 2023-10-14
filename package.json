@@ -10,7 +10,7 @@
     "@nuxtjs/google-fonts": "^3.0.2",
     "autoprefixer": "^10.4.2",
     "nuxt3": "latest",
-    "postcss": "^8.4.8"
+    "postcss": "^8.4.31"
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.8.0",
